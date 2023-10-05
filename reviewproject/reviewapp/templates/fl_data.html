@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--<script language="JavaScript">-->
+<!--    function myrefresh(){-->
+<!--        window.location.reload()-->
+<!--    }-->
+<!--    setTimeout('myrefresh()',2000) // 指定2秒刷新一次-->
+<!--</script>-->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color: skyblue">
+<h1 align="center" style="color:red;"> Fastlign Tester Bench Result</h1>
+<table  border="1" width="100%" >
+  <thead>
+  <tr style="color:black;">
+    <th>ID</th><th>DATE</th><th>TIME</th><th>InputV</th><th>24V</th><th>5V</th><th>3V</th><th>Eye1</th><th>Eye2</th>
+    <th>3DTr</th><th>Load1</th><th>Load2</th><th>Laser1</th><th>Laser2</th><th>Trg1</th><th>Trg2</th><th>IO0</th><th>IO1</th><th>IO2</th><th>IO3</th><th>IO4</th>
+  </tr>
+  </thead>
+  <tbody>
+  {%for obj in data_list%}
+    <tr style="color:brown;">
+      <td>{{obj.id}}</td>
+      <td align="center">{{obj.date}}</td>
+      <td align="center">{{obj.time}}</td>
+        <td>{{obj.Vot_50}}</td>
+      <td>{{obj.Vot_24}}</td>
+      <td>{{obj.Vot_5}}</td>
+      <td>{{obj.Vot_3}}</td>
+
+         <td>{{obj.photo1}}</td>
+      <td>{{obj.photo2}}</td>
+      <td>{{obj.Triger_3D}}</td>
+      <td>{{obj.Vot_load1}}</td>
+        <td>{{obj.Vot_load2}}</td>
+      <td>{{obj.Vot_laser1}}</td>
+      <td>{{obj.Vot_laser2}}</td>
+      <td>{{obj.Triger_laser1}}</td>
+
+        <td>{{obj.Triger_laser2}}</td>
+      <td>{{obj.GPIO_0}}</td>
+      <td>{{obj.GPIO_1}}</td>
+      <td>{{obj.GPIO_2}}</td>
+        <td>{{obj.GPIO_3}}</td>
+      <td>{{obj.GPIO_4}}</td>
+
+    </tr>
+  {% endfor %}
+  </tbody>
+
+</table>
+</body>
+</html>
+

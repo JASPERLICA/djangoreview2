@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Write down the words</title>
+</head>
+<body>
+<h1>Write down table</h1>
+  <form method="POST">
+    <lable>
+      {% csrf_token %}
+      <input type="text" name="name" placeholder="名称">
+    </lable>
+    <lable>
+      <input type="date" name="date">
+    </lable>
+    <lable>
+      <input type = "time" name="time">
+    </lable>
+    <input type ="submit" value="提交">
+  </form>
+
+</body>
+</html>
